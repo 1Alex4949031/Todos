@@ -1,0 +1,46 @@
+.note-input-form {
+    position: relative;
+    border-bottom: 1px solid #e6e6e6;
+    width: 100%;
+}
+
+.input-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    box-shadow: inset 0 -2px 1px rgba(0, 0, 0, 0.03);
+    background: #fefefe;
+    padding: 8px 8px 8px 8px;
+}
+
+.arrow-icon {
+    position: absolute;
+    left: 10px;
+    width: 24px;
+    height: 24px;
+    background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNOC4wMzI3OSAxMC4zMzMzTDIuNjY2NjYgNC45NjY2N0w0LjA2NjY3IDMuNTY2NjdsNCA0LjAwMDAxbDQuMDAwMDEtNC4wMDAwMWwxLjM5OTk5IDEuMzk5OTNsLTUuMzY2NjEgNS4zNjY2MnoiIGZpbGw9IiNDMEMwQzAiLz48L3N2Zz4=');
+    background-size: contain;
+    background-repeat: no-repeat;
+    pointer-events: none;
+}
+
+.note-input {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    width: 100%;
+    padding: 12px 12px 12px 40px;
+    border: none;
+    background: none;
+    font-size: 26px;
+    line-height: 1.4em;
+    outline: none;
+    color: #4d4d4d;
+    box-sizing: border-box;
+}
+
+.note-input::placeholder {
+    color: #d9d9d9;
+    font-family: 'Roboto', sans-serif;
+    font-style: italic;
+    font-weight: 300;
+}

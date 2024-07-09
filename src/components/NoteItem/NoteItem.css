@@ -1,0 +1,59 @@
+.note-item {
+    font-weight: 300;
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    border-bottom: 1px solid #e6e6e6;
+    font-size: 24px;
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+    background: #ffffff;
+}
+
+.note-item input[type="checkbox"] {
+    margin-right: 15px;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    appearance: none;
+    border: 1px solid #d9d9d9;
+}
+
+.note-item input[type="checkbox"]:checked {
+    border-color: #5dc2af;
+    background-image: url('../../assets/checked.svg');
+    background-size: 50% 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.note-item .note-title {
+    flex-grow: 1;
+    color: #4d4d4d;
+    word-break: break-word;
+}
+
+.note-item .note-title.completed {
+    text-decoration: line-through;
+    color: #d9d9d9;
+}
+
+.note-item button {
+    background: none;
+    border: none;
+    color: #cc9a9a;
+    cursor: pointer;
+    font-size: 24px;
+    visibility: hidden;
+    position: absolute;
+    right: 10px;
+}
+
+.note-item button:hover {
+    color: #af5b5e;
+}
+
+.note-item:hover button {
+    visibility: visible;
+}
