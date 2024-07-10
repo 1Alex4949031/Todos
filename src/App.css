@@ -96,3 +96,24 @@ footer .filters button {
     background: #F6F6F6;
     border: 1px solid #DADADA
 }
+
+@media (max-width: 600px) {
+    .App {
+        width: 400px;
+    }
+}
+
+@media (max-width: 400px) {
+    .App {
+        width: 300px;
+    }
+
+    .empty-message {
+        font-size: 20px;
+    }
+
+    footer {
+        font-size: 12px;
+        gap: 10px;
+    }
+}
