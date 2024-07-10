@@ -9,7 +9,7 @@ interface NoteItemProps {
 
 const NoteItem: React.FC<NoteItemProps> = ({ note, toggleNote, deleteNote }) => {
     return (
-        <div className="note-item">
+        <div className="note-item" id={`note-${note.id}`}>
             <input
                 type="checkbox"
                 checked={note.completed}
