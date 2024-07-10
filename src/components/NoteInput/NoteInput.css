@@ -18,8 +18,8 @@
     left: 10px;
     width: 24px;
     height: 24px;
-    background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNOC4wMzI3OSAxMC4zMzMzTDIuNjY2NjYgNC45NjY2N0w0LjA2NjY3IDMuNTY2NjdsNCA0LjAwMDAxbDQuMDAwMDEtNC4wMDAwMWwxLjM5OTk5IDEuMzk5OTNsLTUuMzY2NjEgNS4zNjY2MnoiIGZpbGw9IiNDMEMwQzAiLz48L3N2Zz4=');
-    background-size: contain;
+    background-image: url('../../assets/arrow_down.svg');
+    background-position: center;
     background-repeat: no-repeat;
     pointer-events: none;
 }
@@ -46,7 +46,7 @@
 }
 
 @media (max-width: 400px) {
-    .note-input{
+    .note-input {
         font-size: 20px;
     }
 }
