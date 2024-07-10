@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useMemo} from 'react';
 import './App.css';
 import NoteInput from "./components/NoteInput/NoteInput";
 import NoteList from "./components/NoteList/NoteList";
@@ -35,11 +35,13 @@ const App: React.FC = () => {
         setNotes(notes.filter((note) => !note.completed));
     };
 
-    const filteredNotes = notes.filter((note) => {
-        if (filter === 'active') return !note.completed;
-        if (filter === 'completed') return note.completed;
-        return true;
-    });
+    const filteredNotes = useMemo(() => {
+        return notes.filter((note) => {
+            if (filter === 'active') return !note.completed;
+            if (filter === 'completed') return note.completed;
+            return true;
+        });
+    }, [notes, filter]);
 
     const itemsLeft = notes.filter((note) => !note.completed).length;
 
@@ -49,7 +51,11 @@ const App: React.FC = () => {
             <h1>todos</h1>
             <div className="box-shadow">
                 <NoteInput addNote={addNote}></NoteInput>
-                <NoteList notes={filteredNotes} toggleNote={toggleNote} deleteNote={deleteNote}></NoteList>
+                {filteredNotes.length === 0 ? (
+                    <div className="empty-message">No notes available</div>
+                ) : (
+                    <NoteList notes={filteredNotes} toggleNote={toggleNote} deleteNote={deleteNote}></NoteList>
+                )}
                 <footer>
                     <span>{itemsLeft} item{itemsLeft !== 1 ? 's' : ''} left</span>
                     <div className="filters">
